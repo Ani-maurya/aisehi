@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "9b99ac4b-60e8-4713-9d9b-ff70cb43a10b",
+		"name": "self-hosted-dev-portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32337187"
+	},
+	"item": [
+		{
+			"name": "Get the list of products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://self-hosted-dev-portal.run.place/api/v2/products",
+					"protocol": "https",
+					"host": [
+						"self-hosted-dev-portal",
+						"run",
+						"place"
+					],
+					"path": [
+						"api",
+						"v2",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get the details of developer ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://self-hosted-dev-portal.run.place/api/v2/developer/me",
+					"protocol": "https",
+					"host": [
+						"self-hosted-dev-portal",
+						"run",
+						"place"
+					],
+					"path": [
+						"api",
+						"v2",
+						"developer",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the token for the developer",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"aniketmaurya40@gmail.com\",\r\n    \"password\":\"Ritik@12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://self-hosted-dev-portal.run.place/api/v2/developer/authenticate",
+					"protocol": "https",
+					"host": [
+						"self-hosted-dev-portal",
+						"run",
+						"place"
+					],
+					"path": [
+						"api",
+						"v2",
+						"developer",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout the developer",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://self-hosted-dev-portal.run.place/api/v2/developer/logout",
+					"protocol": "https",
+					"host": [
+						"self-hosted-dev-portal",
+						"run",
+						"place"
+					],
+					"path": [
+						"api",
+						"v2",
+						"developer",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
